@@ -49,10 +49,9 @@ if (sidebar1,sidebar2) == ('GFM_Droop','GFM_Droop'):
     st.write('You selected GFM_Droop and GFM_Droop.')
     sysData = case_3bus_2droop()
     x, xdot = lsm_sys_2droop(sysData)
-    Xss = [0.0000,0.5147,0.1411,0.1452,-0.0386,0.0844,-0.0002,0.5228,
-           -0.1388,0.0386,-0.1930,0.5132,-0.1407,0.9993,0.5147,0.1411,
-           0.1452,-0.0386,0.0844,-0.0002,0.5228,-0.1388,0.0386,-0.1930,
-           0.5132,-0.1407,1.0249,-0.2814,0.5127,-0.1407,0.5127,-0.1407]
+    Xss = [0.0000,0.5147,0.1411,0.1452,-0.0386,0.0844,-0.0002,0.5228,-0.1388,0.0386,-0.1930,0.5132,-0.1407,
+           0.0093,0.5147,0.1411,0.1452,-0.0386,0.0844,-0.0002,0.5228,-0.1388,0.0386,-0.1930,0.5132,-0.1407,
+           1.0249,-0.2814,0.5127,-0.1407,0.5127,-0.1407]
     stateVariableNames = ['theta1','P01','Qo1','phid1','phiq1','gammad1','gammaq1','iid1','iiq1','vcd1','vcq1','iod1','ioq1',
                           'theta2','P02','Qo2','phid2','phiq2','gammad2','gammaq2','iid2','iiq2','vcd2','vcq2','iod2','ioq2',
                           'ibranchD1','ibranchQ1','ibranchD2','ibranchQ2','iloadD','iloadQ']
@@ -127,10 +126,9 @@ if input_number:
             figpie1.update_traces(textfont={'size': 14, 'color': 'black','family': 'Arial'}) # Update the traces for the labels inside the pie chart
             figpie1.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color      
             figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'xanchor':'center','font': {'size': 18, 'color': 'black','family': 'Arial'}}) # Update the layout for the title
-            figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'xanchor':'center'})
             figpie2.update_traces(textfont={'size': 14, 'color': 'black','family': 'Arial'}) # Update the traces for the labels inside the pie chart
-            figpie2.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color            
-        
+            figpie2.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color
+
             # Update the figure/chart position
             #figpie1.update_layout(margin=dict(t=10)) # Adjust left, right, top, bottom margins (l=xx, r=xx, t=xx, b=xx)
         
