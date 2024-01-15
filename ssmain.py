@@ -187,6 +187,7 @@ styled_html = f"""
 """
 
 # plot table
+st.write("The detailed information of all modes are shown below")
 colnew1, colnew2, colnew3 = st.columns(3, gap="small")
 with colnew1:
     st.text("")
