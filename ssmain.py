@@ -46,7 +46,7 @@ sidebar2 = st.sidebar.selectbox(
     ("GFM_Droop", "GFL"), index=0, placeholder="Select configuration...",
 )
 if (sidebar1,sidebar2) == ('GFM_Droop','GFM_Droop'):
-    st.write('You selected GFM_Droop and GFM_Droop.')
+    st.write('You selected combination is (GFM_Droop, GFM_Droop)')
     sysData = case_3bus_2droop()
     x, xdot = lsm_sys_2droop(sysData)
     Xss = [0.0000,0.5147,0.1411,0.1452,-0.0386,0.0844,-0.0002,0.5228,-0.1388,0.0386,-0.1930,0.5132,-0.1407,
@@ -56,7 +56,7 @@ if (sidebar1,sidebar2) == ('GFM_Droop','GFM_Droop'):
                           'theta2','P02','Qo2','phid2','phiq2','gammad2','gammaq2','iid2','iiq2','vcd2','vcq2','iod2','ioq2',
                           'ibranchD1','ibranchQ1','ibranchD2','ibranchQ2','iloadD','iloadQ']
 elif (sidebar1,sidebar2) == ('GFM_Droop','GFL'):
-    st.write('You selected GFM_Droop and GFL.')
+    st.write('You selected combination is (GFM_Droop, GFL)')
     sysData = case_3bus_droop_gfl()
     x, xdot = lsm_sys_droop_gfl(sysData)
     Xss = [0.0000,0.5147,0.1411,0.1452,-0.0386,0.0844,-0.0002,0.5228,
@@ -68,7 +68,7 @@ elif (sidebar1,sidebar2) == ('GFM_Droop','GFL'):
                           'theta2','epsilonL2','wf2','P02','Qo2','phid2','phiq2','gammad2','gammaq2','iid2','iiq2','vcd2','vcq2','iod2','ioq2',
                           'ibranchD1','ibranchQ1','ibranchD2','ibranchQ2','iloadD','iloadQ']
 elif (sidebar1,sidebar2) == ('GFL','GFM_Droop'):
-    st.write('You selected GFL and GFM_Droop.')
+    st.write('You selected combination is (GFL, GFM_Droop)')
     sysData = case_3bus_droop_gfl()
     x, xdot = lsm_sys_droop_gfl(sysData)
     Xss = [0.0000,0.5147,0.1411,0.1452,-0.0386,0.0844,-0.0002,0.5228,
