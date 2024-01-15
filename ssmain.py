@@ -130,7 +130,7 @@ if input_number:
             figpie2.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color
 
             # Update the figure/chart position
-            #figpie1.update_layout(margin=dict(t=10)) # Adjust left, right, top, bottom margins (l=xx, r=xx, t=xx, b=xx)
+            figpie2.update_layout(margin=dict(t=-10)) # Adjust left, right, top, bottom margins (l=xx, r=xx, t=xx, b=xx)
         
         else:
             st.error('Number out of range. Please enter a number between 1 and '+str(numeigs)+'.')
