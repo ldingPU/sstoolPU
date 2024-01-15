@@ -122,6 +122,18 @@ if input_number:
             df2.loc[df2[modeNames[number]] < 0.02, 'statevariables'] = 'Other states'  # Represent state variables with a relatively larger participation factor
             figpie2 = px.pie(df2, values=modeNames[number], names='statevariables', title='Participation factor analysis of mode '+str(number+1))
             figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'xanchor':'center'})
+
+            # Update font size, color and style
+            figpie1.update_layout(title={'text':'Participation factor analysis of mode '+str(number),'x':0.415,'xanchor':'center','font': {'size': 18, 'color': 'black','family': 'Arial'}}) # Update the layout for the title
+            figpie1.update_traces(textfont={'size': 14, 'color': 'black','family': 'Arial'}) # Update the traces for the labels inside the pie chart
+            figpie1.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color      
+            figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'xanchor':'center','font': {'size': 18, 'color': 'black','family': 'Arial'}}) # Update the layout for the title
+            figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'xanchor':'center'})
+            figpie2.update_traces(textfont={'size': 14, 'color': 'black','family': 'Arial'}) # Update the traces for the labels inside the pie chart
+            figpie2.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color            
+        
+            # Update the figure/chart position
+            #figpie1.update_layout(margin=dict(t=10)) # Adjust left, right, top, bottom margins (l=xx, r=xx, t=xx, b=xx)
         
         else:
             st.error('Number out of range. Please enter a number between 1 and '+str(numeigs)+'.')
