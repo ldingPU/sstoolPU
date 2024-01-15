@@ -151,9 +151,9 @@ with col2:
 
 # Update font size, color and style
 mode = range(1,len(eigvals)+1)
-realpart = eigvals.real
-imagpart = eigvals.imag
-frequency = eigvals.imag/2/math.pi
+realpart = round(eigvals.real,2)
+imagpart = round(eigvals.imag,2)
+frequency = round(eigvals.imag/2/math.pi,2)
 dampingratio = -eigvals.real/np.sqrt(realpart*realpart+imagpart*imagpart)
 list_of_tuples = list(zip(mode, realpart, imagpart, frequency, dampingratio))
 df = pd.DataFrame(list_of_tuples,
