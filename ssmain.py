@@ -14,7 +14,7 @@ from ssdata import case_3bus_droop_gfl
 from itertools import product
 
 st.set_page_config(layout="wide")
-st.image('fig/TestSystem.png', caption='System configuration')
+st.image('fig/TestSystem.png')
 caption_html = """
 <p style='
     text-align: center;
