@@ -129,8 +129,7 @@ if input_number:
             figpie2.update_traces(textfont={'size': 14, 'color': 'black','family': 'Arial'}) # Update the traces for the labels inside the pie chart
             figpie2.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color
 
-            figpie1.update_layout(height=400)
-            figpie2.update_layout(height=400)
+            figpie1.update_layout(height=600)
 
             # Update the figure/chart position
             #figpie1.update_layout(margin=dict(t=10)) # Adjust left, right, top, bottom margins (l=xx, r=xx, t=xx, b=xx)
@@ -145,7 +144,7 @@ with col1:
     st.plotly_chart(figheatmap, height=1600, theme="streamlit",use_container_width=True)
 with col2:
     st.plotly_chart(figpie1, theme="streamlit",use_container_width=True)
-    st.plotly_chart(figpie2, theme="streamlit",use_container_width=True)
+    #st.plotly_chart(figpie2, theme="streamlit",use_container_width=True)
     #eigvalsi = eigvals[number-1]  
     #st.text("real: "+str(eigvalsi.real))
     #st.text("imag: "+str(eigvalsi.imag))
