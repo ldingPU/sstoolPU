@@ -152,20 +152,45 @@ with col2:
     #st.text("freq: "+str(eigvalsi.imag/2/math.pi)+" Hz")
     #st.text("damp: "+str(-eigvalsi.real/np.sqrt(eigvalsi.real*eigvalsi.real+eigvalsi.imag*eigvalsi.imag)))
 
+# Update font size, color and style
+mode = range(1,len(eigvals)+1)
+realpart = eigvals.real
+imagpart = eigvals.imag
+frequency = eigvals.imag/2/math.pi
+dampingratio = -eigvals.real/np.sqrt(realpart*realpart+imagpart*imagpart)
+list_of_tuples = list(zip(mode, realpart, imagpart, frequency, dampingratio))
+df = pd.DataFrame(list_of_tuples,
+                  columns = ["mode", "real", "imag", "freq(Hz)", "damping ratio"])
+styled_html = f"""
+<style>
+    table {{
+        color: black;  
+        font-family: Arial;  
+        font-size: 14px;  
+        border-collapse: collapse;
+    }}
+    th {{
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        white-space: nowrap; 
+    }}
+    td {{
+        border: 1px solid black;
+        padding: 1px;
+        text-align: left;
+    }}
+</style>
+{html}
+"""
+
 # plot table
-colnew1, colnew2, colnew3 = st.columns(3,gap="small")
+colnew1, colnew2, colnew3 = st.columns(3, gap="small")
 with colnew1:
     st.text("")
+
 with colnew2:
-    mode = range(1,len(eigvals)+1)
-    realpart = eigvals.real
-    imagpart = eigvals.imag
-    frequency = eigvals.imag/2/math.pi
-    dampingratio = -eigvals.real/np.sqrt(realpart*realpart+imagpart*imagpart)
-    list_of_tuples = list(zip(mode, realpart, imagpart, frequency, dampingratio)) 
-    df = pd.DataFrame(list_of_tuples,
-                      columns = ["mode", "real", "imag", "freq(Hz)", "damping ratio"])
-    st.table(df)
+    st.markdown(styled_html, unsafe_allow_html=True)
+
 with colnew3:
     st.text("")
-
