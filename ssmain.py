@@ -130,7 +130,7 @@ if input_number:
             figpie2.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color
 
             # Update the figure/chart position
-            figpie2.update_layout(margin=dict(t=-10)) # Adjust left, right, top, bottom margins (l=xx, r=xx, t=xx, b=xx)
+            #figpie1.update_layout(margin=dict(t=10)) # Adjust left, right, top, bottom margins (l=xx, r=xx, t=xx, b=xx)
         
         else:
             st.error('Number out of range. Please enter a number between 1 and '+str(numeigs)+'.')
@@ -141,8 +141,8 @@ col1, col2 = st.columns(2,gap="small")
 with col1:
     st.plotly_chart(figheatmap, height=1600, theme="streamlit",use_container_width=True)
 with col2:
-    st.plotly_chart(figpie1, height=400, theme="streamlit",use_container_width=True)
-    st.plotly_chart(figpie2, height=400, theme="streamlit",use_container_width=True)
+    st.plotly_chart(figpie1, height=200, theme="streamlit",use_container_width=True)
+    st.plotly_chart(figpie2, height=200, theme="streamlit",use_container_width=True)
     #eigvalsi = eigvals[number-1]  
     #st.text("real: "+str(eigvalsi.real))
     #st.text("imag: "+str(eigvalsi.imag))
