@@ -15,9 +15,22 @@ from itertools import product
 
 st.set_page_config(layout="wide")
 st.image('fig/TestSystem.png', caption='System configuration')
+caption_html = """
+<p style='
+    text-align: center;
+    color: black;          
+    font-size: 18px;        
+    font-family: Arial; 
+    font-weight: bold;
+'>
+    System Configuration
+</p>
+"""
+st.markdown(caption_html, unsafe_allow_html=True)
 
-vector1 = ['GFM_Droop', '"GFM_VSM', 'GFL', 'SG']
-vector2 = ['GFM_Droop', '"GFM_VSM', 'GFL', 'SG']
+
+vector1 = ['GFM_Droop', 'GFL']
+vector2 = ['GFM_Droop', 'GFL']
 # Create all combinations and index them from 'com1' to 'com16'
 combinations = list(product(vector1, vector2))
 combination_named_index = {f'com{index + 1}': combination for index, combination in enumerate(combinations)}
