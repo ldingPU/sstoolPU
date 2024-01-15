@@ -125,7 +125,7 @@ if input_number:
             figpie1.update_layout(title={'text':'Participation factor analysis of mode '+str(number),'x':0.415,'xanchor':'center','font': {'size': 18, 'color': 'black','family': 'Arial'}}) # Update the layout for the title
             figpie1.update_traces(textfont={'size': 14, 'color': 'black','family': 'Arial'}) # Update the traces for the labels inside the pie chart
             figpie1.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color      
-            figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'y':-0.6,'xanchor':'center','font': {'size': 18, 'color': 'black','family': 'Arial'}}) # Update the layout for the title
+            figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'xanchor':'center','font': {'size': 18, 'color': 'black','family': 'Arial'}}) # Update the layout for the title
             figpie2.update_traces(textfont={'size': 14, 'color': 'black','family': 'Arial'}) # Update the traces for the labels inside the pie chart
             figpie2.update_layout(legend_title_font={'size': 14, 'color': 'black'}, legend_font={'size': 14, 'color': 'black','family': 'Arial'}) # Update the legend font size and color
 
