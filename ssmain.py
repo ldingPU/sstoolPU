@@ -121,7 +121,6 @@ if input_number:
             df2.insert(0, "statevariables", stateVariableNames, True)           
             df2.loc[df2[modeNames[number]] < 0.02, 'statevariables'] = 'Other states'  # Represent state variables with a relatively larger participation factor
             figpie2 = px.pie(df2, values=modeNames[number], names='statevariables', title='Participation factor analysis of mode '+str(number+1))
-            figpie2.update_layout(title={'text':'Participation factor analysis of mode '+str(number+1),'x':0.415,'xanchor':'center'})
 
             # Update font size, color and style
             figpie1.update_layout(title={'text':'Participation factor analysis of mode '+str(number),'x':0.415,'xanchor':'center','font': {'size': 18, 'color': 'black','family': 'Arial'}}) # Update the layout for the title
@@ -161,6 +160,9 @@ dampingratio = -eigvals.real/np.sqrt(realpart*realpart+imagpart*imagpart)
 list_of_tuples = list(zip(mode, realpart, imagpart, frequency, dampingratio))
 df = pd.DataFrame(list_of_tuples,
                   columns = ["mode", "real", "imag", "freq(Hz)", "damping ratio"])
+
+# Convert DataFrame to HTML and style it
+html = df.to_html(index=False)
 styled_html = f"""
 <style>
     table {{
