@@ -141,8 +141,8 @@ col1, col2 = st.columns(2,gap="small")
 with col1:
     st.plotly_chart(figheatmap, height=1600, theme="streamlit",use_container_width=True)
 with col2:
-    st.plotly_chart(figpie1, height=200, theme="streamlit",use_container_width=True)
-    st.plotly_chart(figpie2, height=200, theme="streamlit",use_container_width=True)
+    st.plotly_chart(figpie1, height=100, theme="streamlit",use_container_width=True)
+    st.plotly_chart(figpie2, height=100, theme="streamlit",use_container_width=True)
     #eigvalsi = eigvals[number-1]  
     #st.text("real: "+str(eigvalsi.real))
     #st.text("imag: "+str(eigvalsi.imag))
