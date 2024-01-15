@@ -95,10 +95,14 @@ pmatrixabs = abs(pmatrix)
 modeNames = ['mode{}'.format(i) for i in range(1,numeigs+1)]
 # plot participation factor map
 figheatmap = px.imshow(pmatrixabs,
-                       labels=dict(x="modes", y="state variables"),
+                       labels=dict(x="Modes", y="State Variables"),
                        x = list(range(1,numeigs+1)),
                        y = stateVariableNames)
 figheatmap.update_layout(height=800)
+
+# Update font size, color and style
+figheatmap.update_xaxes(title_font=dict(size=18,color='black',family='Arial'),tickfont=dict(size=14,color='black',family='Arial'))
+figheatmap.update_yaxes(title_font=dict(size=18,color='black',family='Arial'),tickfont=dict(size=14,color='black',family='Arial'))
 
 # Use text_input for manual number input
 input_number = st.sidebar.text_input("Which mode do you want to select?", value='1') #(1-"+str(numeigs)+")
