@@ -29,7 +29,7 @@ caption_html = """
 st.markdown(caption_html, unsafe_allow_html=True)
 
 
-vector1 = ['GFM_Droop', 'GFL']
+vector1 = ['GFM_Droop']
 vector2 = ['GFM_Droop', 'GFL']
 # Create all combinations and index them from 'com1' to 'com16'
 combinations = list(product(vector1, vector2))
