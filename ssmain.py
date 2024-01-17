@@ -39,7 +39,7 @@ selected_combination2 = combination_named_index['com2']
 # sidebar
 sidebar1 = st.sidebar.selectbox(
     "What configuration do you want to select for the 1st generator?",
-    ("GFM_Droop", "GFL"), index=0, placeholder="Select configuration...",
+    ("GFM_Droop"), index=0, placeholder="Select configuration...",
 )
 sidebar2 = st.sidebar.selectbox(
     "What configuration do you want to select for the 2nd generator?",
