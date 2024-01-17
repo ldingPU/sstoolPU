@@ -9,7 +9,7 @@ def pf_calc(a,b):
 
 
 def lsm_sys_droop_gfl(sysData):
-    xdot = Matrix([0]*34)
+    xdot = Matrix([0]*33)
     
     delta_1 = symbols('delta_1')
     Po_1 = symbols('Po_1')
@@ -177,7 +177,7 @@ def lsm_sys_droop_gfl(sysData):
     return x, xdot
 
 def lsm_sys_2droop(sysData):
-    xdot = Matrix([0]*32)
+    xdot = Matrix([0]*31)
     
     delta_1 = symbols('delta_1')
     Po_1 = symbols('Po_1')
