@@ -29,7 +29,7 @@ caption_html = """
 st.markdown(caption_html, unsafe_allow_html=True)
 
 
-vector1 = ['GFM_Droop']
+vector1 = ['GFM_Droop', 'GFM_Droop']
 vector2 = ['GFM_Droop', 'GFL']
 # Create all combinations and index them from 'com1' to 'com16'
 combinations = list(product(vector1, vector2))
@@ -39,7 +39,7 @@ selected_combination2 = combination_named_index['com2']
 # sidebar
 sidebar1 = st.sidebar.selectbox(
     "What configuration do you want to select for the 1st generator?",
-    ("GFM_Droop"), index=0, placeholder="Select configuration...",
+    ("GFM_Droop", "GFM_Droop"), index=0, placeholder="Select configuration...",
 )
 sidebar2 = st.sidebar.selectbox(
     "What configuration do you want to select for the 2nd generator?",
