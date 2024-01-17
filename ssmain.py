@@ -51,7 +51,7 @@ if (sidebar1,sidebar2) == ('GFM_Droop','GFM_Droop'):
     x, xdot = lsm_sys_2droop(sysData)
     Xss = [0.0000,0.4085,0.0973,0.0428,-0.0102,0.1673,-0.0003,0.4201,-0.0958,0.0381,-0.1910,0.4105,
           -0.0977,-0.0047,0.5425,0.1438,0.0569,-0.0151,0.1673,-0.0005,0.5560,-0.1429,0.0380,-0.1906,
-           0.5464,-0.1449,0.2127,-0.0549,0.0915,-0.0219,0.1218,-0.0330,0.5127,-0.1407]
+           0.5464,-0.1449,0.2127,-0.0549,0.0915,-0.0219,0.1218,-0.0330]
     stateVariableNames = ['theta1','P01','Qo1','phid1','phiq1','gammad1','gammaq1','iid1','iiq1','vcd1','vcq1','iod1','ioq1',
                           'theta2','P02','Qo2','phid2','phiq2','gammad2','gammaq2','iid2','iiq2','vcd2','vcq2','iod2','ioq2',
                           'ibranchD1','ibranchQ1','ibranchD2','ibranchQ2','iloadD','iloadQ']
