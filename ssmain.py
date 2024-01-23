@@ -178,7 +178,7 @@ styled_html = f"""
     td {{
         border: 1px solid black;
         padding: 1px;
-        text-align: left;
+        text-align: center;
     }}
 </style>
 {html}
