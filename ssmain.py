@@ -166,7 +166,8 @@ styled_html = f"""
     table {{
         color: black;  
         font-family: Arial;  
-        font-size: 14px;  
+        font-size: 14px;
+        text-align: center;
         border-collapse: collapse;
     }}
     th {{
