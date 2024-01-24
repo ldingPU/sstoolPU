@@ -192,7 +192,8 @@ with colnew1:
     st.text("")
 
 with colnew2:
-    st.markdown(styled_html, unsafe_allow_html=True)
+    #st.markdown(styled_html, unsafe_allow_html=True)
+    st.text("")
 
 with colnew3:
     st.text("")
